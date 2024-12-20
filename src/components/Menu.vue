@@ -19,9 +19,9 @@
                         <p>História</p>
                     </div>
                 </li>
-                <li>Actions</li>
-                <li>Actions</li>
-                <li>Actions</li>
+                <li class="option">Actions</li>
+                <li class="option">Actions</li>
+                <li class="option">Actions</li>
             </ul>
         </div>
     </div>
