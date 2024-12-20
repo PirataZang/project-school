@@ -46,15 +46,17 @@
                     gap: 8px;
                     position: absolute;
                     padding: 15px 30px;
+                    width: 160px;
                     top: 100%;
                     border-radius: 5px;
                     z-index: 1;
                     left: -10%;
                     background: #951b1b;
+                    box-shadow: 10px 11px 5px #00000073;
+                    transition: all 0.5s;
 
                     :hover {
                         font-weight: bold;
-                        transition: all 0.5s;
                     }
                 }
             }

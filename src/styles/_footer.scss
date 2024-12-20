@@ -1,3 +1,77 @@
 .footer {
+    display: flex;
     background-color: #67001c;
+    padding: 10%;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .socialMedias {
+        .socialMediasOptions {
+            list-style: none;
+
+            .socialMedia {
+                cursor: pointer;
+                color: white;
+                transition: all 0.5s;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                &:hover {
+                    font-weight: bold;
+                    transition: all 0.5s;
+                }
+            }
+
+            .textarea {
+                width: 450px;
+                max-width: 450px;
+                padding: 5px;
+                height: 100px;
+                font-family: "Poppins", serif;
+                font-weight: 400;
+                outline: none;
+                border-radius: 5px;
+
+                &:focus {
+                    box-shadow: 5px 5px 6px #00000073;
+                    transition: all 0.5s;
+                }
+            }
+
+            .buttonWhatsapp {
+                border: none;
+                outline: none;
+                height: 45px;
+                background: green;
+                border-radius: 5px;
+                color: white;
+                margin-top: 15px;
+
+                &:active {
+                    transform: scale(0.95);
+                    transition: all 0.5s;
+                }
+            }
+        }
+    }
+
+    .contacts {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        .contact {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                font-weight: bold;
+                transition: all 0.5s;
+            }
+        }
+
+    }
+
 }
