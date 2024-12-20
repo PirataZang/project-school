@@ -1,0 +1,55 @@
+.menu {
+    display: flex;
+    background-color: #7a2931;
+    flex-direction: column;
+
+    .step {
+        display: flex;
+        justify-content: end;
+        padding: 15px 23%;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .contacts {
+        background-color: #461220;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 23%;
+
+        .actionsButtons {
+            list-style: none;
+            gap: 24px;
+            position: relative;
+
+            .school {
+                display: flex;
+                gap: 7px;
+                
+                .arrow {
+                    transform: rotate(0);
+                    transition: transform 0.5s;
+                }
+
+                .down {
+                    transform: rotate(180deg);
+                    transition: transform 0.5s;
+                }
+
+                .schoolOptions {
+                    gap: 8px;
+                    position: absolute;
+                    padding: 15px 30px;
+                    top: 100%;
+                    border-radius: 5px;
+                    z-index: 1;
+                    left: -10%;
+                    background: #7a2931;
+                }
+            }
+        }
+    }
+}

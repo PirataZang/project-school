@@ -1,0 +1,56 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import url(_menu.scss);
+@import url(_homePage.scss);
+@import url(_footer.scss);
+
+
+//? Default Class
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F3F3F3;
+    margin: 0;
+}
+
+
+
+//? Displays
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+//? Colors
+.bWhite {
+    background-color: white;
+}
+
+.fWhite {
+    color: white;
+}
+
+
+
+//? Fonts
+.f-18 {
+    font-size: 18px;
+}
+
+
+
+//? Router
+.router-link {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,16 @@
+.home {
+
+    
+    .image {
+        position: relative;
+        width: 100%;
+        height: 500px;
+
+        .imageSchool {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            object-fit: cover; /* Preenche o container, pode cortar a imagem */
+        }
+    }
+}
