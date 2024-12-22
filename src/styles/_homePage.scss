@@ -1,6 +1,4 @@
 .home {
-
-    
     .image {
         position: relative;
         width: 100%;
@@ -11,6 +9,38 @@
             height: 100%;
             position: relative;
             object-fit: cover; /* Preenche o container, pode cortar a imagem */
+        }
+    }
+
+    .textInit {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        margin: 50px;
+        padding: 25px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #00000045;
+
+        .title {
+            text-align: center;
+        }
+
+        .topics{
+            padding: 0px 25px;
+        }
+    }
+
+    .photoGrid {
+        display: grid;
+        height: 480px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .photoItem {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

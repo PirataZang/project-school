@@ -6,21 +6,21 @@
         </div>
         <div class="actions step row fWhite ">
             <div class="logo">
-                <h1>LOGO</h1>
+                <h1><router-link to="/" class="router-link">LOGO</router-link></h1>
             </div>
             <ul class="actionsButtons row f-18">
                 <li @click="showOptionsSchool = !showOptionsSchool" class="school">
-                    Escola <i id="arrowSchool" class="fa-solid fa-caret-up arrow down"></i>
+                    <i class="fa-solid fa-school"></i> Escola <i id="arrowSchool" class="fa-solid fa-caret-up arrow down"></i>
                     <div v-if="showOptionsSchool" class="schoolOptions column">
-                        <p>História</p>
-                        <p>Colonia de férias</p>
-                        <p>Faixa-etaria</p>
-                        <p>História</p>
+                        <p> <i class="fa-solid fa-book"></i> <router-link to="/history" class="router-link"> História </router-link></p>
+                        <p> <i class="fa-solid fa-child-reaching"></i> Colonia de férias</p>
+                        <p> <i class="fa-solid fa-book-bookmark"></i> Atividades extra-curriculares</p>
                     </div>
                 </li>
-                <li class="option">Actions</li>
-                <li class="option">Actions</li>
-                <li class="option">Actions</li>
+                <li class="option"> <i class="fa-solid fa-graduation-cap"></i> Matriculas</li>
+                <li class="option"> <i class="fa-solid fa-chalkboard-user"></i> Professores</li>
+                <li class="option"> <i class="fa-solid fa-comment"></i> Sugestões</li>
+                <li class="option"> <i class="fa-solid fa-rectangle-list"></i> Lista de Materiais</li>
             </ul>
         </div>
     </div>
