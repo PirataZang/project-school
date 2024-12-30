@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../components/HomePage.vue';
 import History from '../components/History.vue';
+import Shop from '../components/Shop.vue';
 
 // Importar as páginas
 
@@ -16,6 +17,11 @@ const routes = [
         path: '/history',
         name: 'History',
         component: History
+    },
+    {
+        path: '/shop',
+        name: 'Shop',
+        component: Shop
     },
 
 ];

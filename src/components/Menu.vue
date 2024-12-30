@@ -10,15 +10,20 @@
             </div>
             <ul class="actionsButtons row f-18">
                 <li @click="showOptionsSchool = !showOptionsSchool" class="school">
-                    <i class="fa-solid fa-school"></i> Escola <i id="arrowSchool" class="fa-solid fa-caret-up arrow down"></i>
+                    <i class="fa-solid fa-school"></i> Escola <i id="arrowSchool"
+                        class="fa-solid fa-caret-up arrow down"></i>
                     <div v-if="showOptionsSchool" class="schoolOptions column">
-                        <p> <i class="fa-solid fa-book"></i> <router-link to="/history" class="router-link"> História </router-link></p>
+                        <p> <i class="fa-solid fa-book"></i>
+                            <router-link to="/history" class="router-link"> História </router-link>
+                        </p>
                         <p> <i class="fa-solid fa-child-reaching"></i> Colonia de férias</p>
                         <p> <i class="fa-solid fa-book-bookmark"></i> Atividades extra-curriculares</p>
                     </div>
                 </li>
                 <li class="option"> <i class="fa-solid fa-graduation-cap"></i> Matriculas</li>
-                <li class="option"> <i class="fa-solid fa-chalkboard-user"></i> Professores</li>
+                <li class="option"> <i class="fa-solid fa-cart-shopping"></i>
+                    <router-link class="router-link" to="/shop"> shop </router-link>
+                </li>
                 <li class="option"> <i class="fa-solid fa-comment"></i> Sugestões</li>
                 <li class="option"> <i class="fa-solid fa-rectangle-list"></i> Lista de Materiais</li>
             </ul>

@@ -1,0 +1,35 @@
+.shop {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 30px;
+        padding: 20px 30px;
+
+        .card {
+            background: #cfcfcf;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            border-radius: 8px;
+            padding: 25px;
+            justify-content: space-between;
+
+            .divImages {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .actions {
+                display: flex;
+                justify-content: space-around;
+
+                .favorite {
+                    font-size: 25px;
+                    color: red;
+                }
+            }
+        }
+    }
+}
