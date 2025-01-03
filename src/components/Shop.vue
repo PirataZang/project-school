@@ -1,50 +1,92 @@
 <template>
     <div class="shop">
         <div class="searchMenu">
-
+            <input type="text" v-model="itemSearch" class="search" placeholder="Faça sua busca aqui!"
+                @keyup.enter="search(itemSearch)">
         </div>
-        <div class="content">
-            <div class="card">
-                <h2>Camisa Uniforme</h2>
+        <div v-if="products" class="content">
+            <div class="card" v-for="product in products" :key="product.id">
                 <div class="divImages">
-                    <button><i class="fa-sharp fa-solid fa-chevron-left"></i></button>
-                    <div class="images">
-                        <h1>aaaaa</h1>
-                        <h1>aaaaa</h1>
-                        <h1>aaaaa</h1>
-                        <h1>aaaaa</h1>
-                        <h1>aaaaa</h1>
-                    </div>
-                    <button><i class="fa-sharp fa-solid fa-chevron-right"></i></button>
                 </div>
-                <h1>Valor: R$ 80,00</h1>
-                <div class="actions">
-                    <i class="fa-regular fa-heart favorite"></i>
-                    <i class="fa-solid fa-heart favorite"></i>
-                    <button>
-                        <h2><i class="fa-solid fa-cart-shopping"></i> Carrinho</h2>
+                <span class="title">{{ product.name }}</span>
+                <h2> R$ {{ product.amount }}</h2>
+                <div class="buyActions">
+                    <button class="buy car">
+                        <h2 v-if="!product.favorited" @click="addCar(product.id)"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</h2>
+                        <h2 v-if="product.favorited" @click="addCar(product.id, true)"><i class="fa-solid fa-trash"></i> Remover do Carrinho</h2>
+                    </button>
+                    <button class="buy">
+                        <h2><i class="fa-solid fa-sack-dollar"></i> Comprar</h2>
                     </button>
                 </div>
             </div>
         </div>
+        <div v-else class="notFound">
+            <h1>📦 Produto fora do radar! Tente outro termo. </h1>
+        </div>
     </div>
 </template>
 <script>
+import collect from 'collect.js';
+
 export default {
-    name: 'Shop.vue',
+    name: 'Shop',
 
     data() {
         return {
-            favorite: false
+            itemSearch: null,
+            products: {}
         }
     },
 
+    mounted() {
+        this.reload();
+    },
 
 
     methods: {
-        addFavorite(id){
+        reload() {
+            return this.$api.getData('/products').then(r => {
+                this.products = r;
+                this.products = this.products.map(product => {
+                    product['favorited'] = false;
+                    product.amount = product.amount.toString().replace('.', ',');
+                    return product;
+                });
+            });
+        },
 
+        search(item) {
+            if (!item)
+                return this.reload();
+
+            try {
+                this.$api.getData(`/products/product?name=${item}`).then(r => {
+                    if (collect(r).count() < 1)
+                        return this.products = null
+
+                    this.products = r;
+                    this.products = this.products.map(product => {
+                        product.amount = product.amount.toString().replace('.', ',');
+                        return product;
+                    });
+                })
+            } catch (error) {
+                throw new Error(error)
+            }
+        },
+
+        addCar(id, remove) {
+            debugger
+            const product = this.products.find(p => p.id === id);
+            if (product) {
+                if (remove) {
+                    return product.favorited = false;
+                }
+                return product.favorited = true;
+            }
         }
+
     }
 }
 </script>

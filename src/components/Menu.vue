@@ -1,7 +1,7 @@
 <template>
     <div class="menu">
         <div class="contacts step row f-18 fWhite">
-            <router-link to="/KARAIO" class="router-link">Portal</router-link>
+            <p> Portal</p>
             <router-link to="/" class="router-link">Trabalhe Conosco</router-link>
         </div>
         <div class="actions step row fWhite ">
