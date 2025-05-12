@@ -16,8 +16,6 @@
                         <p> <i class="fa-solid fa-book"></i>
                             <router-link to="/history" class="router-link"> História </router-link>
                         </p>
-                        <p> <i class="fa-solid fa-child-reaching"></i> Colonia de férias</p>
-                        <p> <i class="fa-solid fa-book-bookmark"></i> Atividades extra-curriculares</p>
                     </div>
                 </li>
                 <li class="option"> <i class="fa-solid fa-graduation-cap"></i> Matriculas</li>

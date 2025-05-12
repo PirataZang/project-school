@@ -14,11 +14,6 @@
                         <i class="fa-brands fa-square-facebook"></i> Facebook
                     </a>
                 </li>
-                <li class="socialMedia">
-                    <a href="#" target="_blank">
-                        <i class="fa-brands fa-square-facebook"></i> Facebook
-                    </a>
-                </li>
                 <li class="socialMedia column">
                     <textarea class="textarea" v-model="userMessage" placeholder="Escreva aqui sua mensagem"></textarea>
                     <button class="buttonWhatsapp">

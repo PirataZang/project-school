@@ -6,7 +6,7 @@
     .step {
         display: flex;
         justify-content: end;
-        padding: 15px 23%;
+        padding: 15px 5%;
         align-items: center;
         gap: 24px;
     }
@@ -18,7 +18,7 @@
     .actions {
         display: flex;
         justify-content: space-between;
-        padding: 50px 23%;
+        padding: 50px 5%;
 
         .actionsButtons {
             cursor: pointer;
@@ -43,6 +43,7 @@
                 }
 
                 .schoolOptions {
+                    cursor: pointer;
                     gap: 8px;
                     position: absolute;
                     padding: 15px 30px;
@@ -54,16 +55,7 @@
                     background: #951b1b;
                     box-shadow: 10px 11px 5px #00000073;
                     transition: all 0.5s;
-
-                    :hover {
-                        font-weight: bold;
-                    }
                 }
-            }
-
-            .option:hover {
-                font-weight: bold;
-                transition: all 0.5s;
             }
         }
     }
