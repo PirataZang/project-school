@@ -4,11 +4,14 @@
     flex-direction: column;
 
     .step {
-        display: flex;
-        justify-content: end;
-        padding: 15px 5%;
         align-items: center;
+        justify-content: end;
         gap: 24px;
+    }
+
+    .menuSpace {
+        display: flex;
+        padding: 15px 3%;
     }
 
     .contacts {
@@ -16,9 +19,7 @@
     }
 
     .actions {
-        display: flex;
         justify-content: space-between;
-        padding: 50px 5%;
 
         .actionsButtons {
             cursor: pointer;

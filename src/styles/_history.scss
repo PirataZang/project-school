@@ -3,4 +3,62 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: justify;
+}
+
+.teacherDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 3%;
+
+    .teacherGallery {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 50px;
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            border-radius: 15px;
+            position: relative;
+            transition: ease-in-out 0.5s;
+
+            .photo {
+                width: 350px;
+                border-radius: 15px;
+                object-fit: cover;
+                height: 600px;
+                object-position: right;
+                transition: ease-in-out 0.5s;
+            }
+
+            .text {
+                display: block;
+                color: white;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                word-break: break-word;
+                text-wrap: auto;
+                padding: 5px;
+                text-align: center;
+                transform: translate(0, 500%);
+                transition: all ease-in 0.5s;
+            }
+
+            &:hover {
+                .photo {
+                    opacity: 10%;
+                }
+                .text {
+                   opacity: 100%;
+                   transform: translate(0, 0);
+                }
+            }
+        }
+    }
 }

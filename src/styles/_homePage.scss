@@ -39,7 +39,7 @@
     .stages {
         display: flex;
         justify-content: center;
-        padding: 10% 0;
+        padding: 5% 0;
 
         .gallery {
             gap: 10px;
@@ -51,7 +51,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 335px;
-                transition: ease-in-out 0.5s;
+                transition: ease-in-out 0.3s;
 
                 .photos {
                     height: 500px;
